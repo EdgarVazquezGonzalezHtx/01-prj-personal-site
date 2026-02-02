@@ -1,11 +1,168 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<link rel="stylesheet" href="./styles.css" />
+<script src="./script.js" defer></script>
+
 <head>
-  <meta charset="UTF-8">
-  <title>My Personal Site</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Edgar Vazquez – Web Developer</title>
+  <meta name="description" content="Portfolio of Edgar Vazquez – clean, fast web experiences with HTML/CSS/JS and systems projects in C." />
+  <meta property="og:title" content="Edgar Vazquez – Web Developer" />
+  <meta property="og:description" content="Clean, fast web experiences. Available for freelance." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.png" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🚀</text></svg>">
+
+  <!-- Tailwind CSS CDN (utility classes without build step) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { container: { center: true, padding: '1rem' } } } };
+  </script>
+
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="./styles.css" />
 </head>
-<body>
-  <!-- Add your HTML content here -->
+<body class="bg-zinc-50 text-zinc-900 selection:bg-indigo-200/60">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/70 border-b">
+    <nav class="container max-w-6xl h-14 flex items-center justify-between">
+      <a href="#home" class="font-semibold tracking-tight">Edgar Vazquez</a>
+      <div class="hidden sm:flex items-center gap-6 text-sm">
+        <a href="#projects" class="hover:underline">Projects</a>
+        <a href="#services" class="hover:underline">Services</a>
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+        <a href="#contact" class="px-3 py-1.5 rounded-2xl bg-indigo-600 text-white">Hire me</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="container max-w-6xl py-16 sm:py-24">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div class="reveal">
+        <div class="inline-flex items-center gap-2 text-xs border rounded-full px-3 py-1 mb-4">
+          <span class="w-3 h-3 rounded-full bg-emerald-500"></span> Available for freelance
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-bold leading-tight">
+          Hi, I’m Edgar. I build clean web experiences</span>.
+        </h1>
+        <p class="mt-4 text-zinc-600">CS student • Web & systems dev • Dallas</p>
+        <p class="mt-4 max-w-prose">I build clean, fast web apps with HTML/CSS/JS. I’m looking for freelance work in landing pages, small web apps, and performance‑minded sites.</p>
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <a class="px-3 py-1.5 rounded-2xl border" href="https://github.com/EdgarVazquezGonzalez" target="_blank" rel="noreferrer noopener">GitHub</a>
+          <a class="px-3 py-1.5 rounded-2xl border" href="https://www.linkedin.com/in/edgar-vazquez-gonzalez/" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+          <a class="px-3 py-1.5 rounded-2xl border" href="mailto:garitosmart@gmail.com">Email</a>
+          <a class="px-3 py-1.5 rounded-2xl bg-indigo-600 text-white" href="/EV_WebResume.pdf" download>Download Resume</a>
+        </div>
+        <div class="mt-6 flex items-center gap-4 text-sm text-zinc-700">
+          <span class="inline-flex items-center gap-2">📍 Dallas / Remote</span>
+          <span class="inline-flex items-center gap-2">🧰 Freelance & Internships</span>
+          <span class="inline-flex items-center gap-2">🎓 UT Dallas – CS</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="rounded-2xl shadow-xl bg-white p-6">
+          <div class="mb-4 flex items-center gap-2">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="8" cy="7" r="3"/></svg>
+            <h3 class="font-medium">Tech I use</h3>
+          </div>
+          <div id="stack" class="flex flex-wrap gap-2 text-xs"></div>
+          <p class="mt-6 text-sm text-zinc-600">Good fit for: landing pages, student org sites, small dashboards, and interactive study tools.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="container max-w-6xl py-16 border-t">
+    <div class="flex items-center gap-3 mb-8">
+      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 7h4"/><path d="M8 3h8"/><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 11h8"/><path d="M8 15h8"/></svg>
+      <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Projects</h2>
+    </div>
+    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-6">
+      <div class="flex items-center gap-2 w-full sm:w-auto">
+        <input id="search" placeholder="Search projects (e.g., React, C, sockets)" class="w-full sm:w-96 rounded-xl border px-3 py-2 bg-white"/>
+      </div>
+      <div id="tagBtns" class="flex flex-wrap items-center gap-2"></div>
+    </div>
+    <div id="grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="container max-w-6xl py-16 border-t">
+    <div class="flex items-center gap-3 mb-8">
+      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18"/><path d="M5 7v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7"/><path d="M14 7a2 2 0 1 1-4 0"/></svg>
+      <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Services</h2>
+    </div>
+    <div id="servicesGrid" class="grid md:grid-cols-3 gap-6"></div>
+  </section>
+
+  <!-- About & Testimonials -->
+  <section id="about" class="container max-w-6xl py-16 border-t">
+    <div class="flex items-center gap-3 mb-8">
+      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12 12 0 0 1 1.84.89V19l-8 4-8-4v-7.532a12 12 0 0 1 1.84-.89L12 14z"/></svg>
+      <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">About & Testimonials</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6 items-start">
+      <div class="rounded-2xl bg-white p-6 shadow">
+        <h3 class="font-semibold mb-2">About me</h3>
+        <p class="text-sm text-zinc-700 leading-relaxed">
+          I’m a CS major at UT Dallas with a mix of web and systems projects — from simple React dashboards to pthread‑based file hashing and a Unix shell. I like shipping crisp UIs, profiling bottlenecks, and documenting setups so clients can own their sites.
+        </p>
+        <p class="text-sm mt-3 text-zinc-700">Outside class, I contribute to student org projects and help friends stand up small business sites.</p>
+      </div>
+      <div class="space-y-4" id="testimonials"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container max-w-6xl py-16 border-t">
+    <div class="flex items-center gap-3 mb-8">
+      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+      <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Contact</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="rounded-2xl bg-white p-6 shadow">
+        <h3 class="font-semibold">Let’s work together</h3>
+        <p class="text-sm text-zinc-600 mt-1">Tell me about your project and budget. I’ll reply within a day.</p>
+        <form class="mt-4 space-y-3" id="contactForm">
+          <input name="name" required placeholder="Your name" class="w-full rounded-xl border px-3 py-2 bg-white"/>
+          <input name="email" required type="email" placeholder="Email" class="w-full rounded-xl border px-3 py-2 bg-white"/>
+          <input name="budget" placeholder="Budget (optional)" class="w-full rounded-xl border px-3 py-2 bg-white"/>
+          <textarea name="details" required placeholder="What do you need built?" rows="4" class="w-full rounded-xl border px-3 py-2 bg-white"></textarea>
+          <button class="rounded-2xl bg-indigo-600 text-white px-4 py-2" type="submit">Send email</button>
+        </form>
+        <p class="text-xs text-zinc-500 mt-3">Prefer DM? Try LinkedIn — links up top.</p>
+      </div>
+      <div class="rounded-2xl bg-white p-6 shadow">
+        <h3 class="font-semibold mb-2">Why hire me</h3>
+        <ul class="text-sm space-y-2 list-disc pl-5">
+          <li>Clear scopes and fixed pricing for small sites.</li>
+          <li>Mobile‑first, accessible, and fast‑loading pages.</li>
+          <li>Easy hand‑off: README, deploy, and Loom walkthrough.</li>
+        </ul>
+        <div class="mt-4">
+          <a href="#services" class="inline-flex items-center gap-2 text-sm underline">🔧 See packages</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t">
+    <div class="container max-w-6xl py-8 text-sm flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div>© <span id="year"></span> Edgar Vazquez. All rights reserved.</div>
+      <div class="flex items-center gap-4 text-sm">
+        <a href="https://github.com/your-username" target="_blank" rel="noreferrer noopener" class="hover:underline">GitHub</a>
+        <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noreferrer noopener" class="hover:underline">LinkedIn</a>
+        <a href="mailto:you@example.com" class="hover:underline">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Your JS -->
+  <script src="./script.js" defer></script>
 </body>
 </html>
