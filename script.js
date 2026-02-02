@@ -9,12 +9,9 @@ const SERVICES = [
 ];
 
 const PROJECTS = [
-  { title: 'Stardew‑style Pomodoro', year: 2025, tags: ['Web','JS','UI'], blurb: 'A cute productivity timer with pixel art, audio loops, and GIF triggers.', tech: ['HTML','CSS','JavaScript'], links: { live: '#', repo: '#' } },
-  { title: 'Simple Shell (sish)', year: 2025, tags: ['Systems','C'], blurb: 'Unix‑style shell with built‑ins (cd, history) and pipes.', tech: ['C','UNIX','Make'], links: { live: null, repo: '#' } },
-  { title: 'Multithreaded Hash Tree', year: 2025, tags: ['Systems','C','Threads'], blurb: 'Binary tree of threads computing file hash; measured speedup up to 256 threads.', tech: ['C','pthread'], links: { live: null, repo: '#' } },
-  { title: 'Workout Tracker (WIP)', year: 2025, tags: ['Web','Full‑stack'], blurb: 'Login, set tracking, and progress charts; built as a personal project.', tech: ['React','Node','Chart.js'], links: { live: '#', repo: '#' } },
-  { title: 'MIPS ASCII Board Game', year: 2024, tags: ['Assembly','MIPS'], blurb: '6×6 board with cursor movement and game state in MIPS.', tech: ['MIPS'], links: { live: null, repo: '#' } },
-  { title: 'dbserver.c', year: 2025, tags: ['Networking','C'], blurb: 'Multi‑threaded key‑value store over sockets for class project.', tech: ['C','Sockets','pthread'], links: { live: null, repo: '#' } },
+  { title: 'Stardew‑style Pomodoro', year: 2025, tags: ['Web','JS','UI'], blurb: 'A cute productivity timer with pixel art, audio loops, and GIF triggers.', tech: ['HTML','CSS','JavaScript'], links: { live: 'https://stardew-pomodoro.vercel.app/', repo: 'https://github.com/EdgarVazquezGonzalez/Stardew-Pomodoro' } },
+  { title: 'Workout Tracker (WIP)', year: 2025, tags: ['Web','Full‑stack'], blurb: 'Login, set tracking, and progress charts; built as a personal project.', tech: ['React','Node','Chart.js'], links: { live: '#', repo: '#' }},
+  ,
   // Added project: The Coop Chicken Fingers website
   { title: 'The Coop Chicken Fingers Website', year: 2025, tags: ['Web','Client','Business'], blurb: 'Website for The Coop Chicken Fingers restaurant, featuring menu, hours, and contact info. Built for a real business client.', tech: ['HTML','CSS','JavaScript'], links: { live: 'https://www.thecoopchickenfingers.com/', repo: null } },
 ];
